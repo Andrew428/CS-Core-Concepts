@@ -14,88 +14,81 @@ import RadixSort from './util/RadixSort.js';
 
 
 window.onload = () => {
-    // Linked List  
-    // const list = new LinkedList(); 
-    //   list.append(1);    
-    //   list.append(2); 
-    //   list.append(2);   
-    //   list.append(3);
-    //   list.append(0);
-    //   list.prepend(0);
-    //   list.prepend(0);  
-    //   console.log(list);
-    //   list.removeDups();
-    //   console.log(list);
+    console.log('Linked List');    
+    const list = new LinkedList(); 
+      list.append(1);    
+      list.append(2); 
+      list.append(2);   
+      list.append(3);
+      list.append(0);
+      list.prepend(0);
+      list.prepend(0);  
+      console.log(list);
+      list.removeDups();
+      console.log(list);
 
-    // HashTable
-    // const ht = new HashTable(); 
-    //   console.log(ht);
-    //   ht.add('beau', 'person');
-    //   ht.add('fido', 'dog');
-    //   ht.add('rex', 'dinosour');
-    //   ht.add('tux', 'penguin')
-    //   console.log(ht.lookup('tux'))
-    //   ht.print();
+    console.log('HashTable');
+    const ht = new HashTable(); 
+      console.log(ht);
+      ht.add('beau', 'person');
+      ht.add('fido', 'dog');
+      ht.add('rex', 'dinosour');
+      ht.add('tux', 'penguin')
+      console.log(ht.lookup('tux'))
+      ht.print();
 
-    // BinarySearchTree
-    // const bst = new BinarySearchTree();
-    //   bst.add(9);
-    //   bst.add(4);
-    //   bst.add(17);
-    //   bst.add(3);
-    //   bst.add(6);
-    //   bst.add(22);
-    //   bst.add(5);
-    //   bst.add(7);
-    //   bst.add(20);
+    console.log('BinarySearchTree');
+    const bst = new BinarySearchTree();
+      bst.add(9);
+      bst.add(4);
+      bst.add(17);
+      bst.add(3);
+      bst.add(6);
+      bst.add(22);
+      bst.add(5);
+      bst.add(7);
+      bst.add(20);
 
-    //   console.log(bst.findMinHeight());
-    //   console.log(bst.findMaxHeight());    
-    //   console.log(bst.findMinHeight());
-    //   console.log(bst.findMaxHeight());
-    //   console.log(bst.isBalanced());
-    //   bst.add(10);
-    //   console.log(bst.isBalanced());
-    //   bst.add(11);
-    //   bst.add(14);
-    //   console.log(bst.isBalanced());
-    //   console.log('inOrder: ' + bst.inOrder());
-    //   console.log('preOrder: ' + bst.preOrder());
-    //   console.log('postOrder: ' + bst.postOrder());
+      console.log(bst.findMinHeight());
+      console.log(bst.findMaxHeight());
+      console.log(bst.isBalanced());
+      bst.add(10);
+      console.log(bst.isBalanced());
+      console.log('inOrder: ' + bst.inOrder());
+      console.log('preOrder: ' + bst.preOrder());
+      console.log('postOrder: ' + bst.postOrder());
+      console.log('levelOrder: ' + bst.levelOrder());
 
-    //   console.log('levelOrder: ' + bst.levelOrder());
+    console.log('Queue');
+    const q = new Queue(); 
+      q.enqueue('a'); 
+      q.enqueue('b');
+      q.enqueue('c');
+      q.print();
+      q.dequeue();
+      console.log(q.front());
+      q.print();
 
-    
-    // const q = new Queue(); 
-    //   q.enqueue('a'); 
-    //   q.enqueue('b');
-    //   q.enqueue('c');
-    //   q.print();
-    //   q.dequeue();
-    //   console.log(q.front());
-    //   q.print();
+    console.log('PriorityQueue');
+    const pq = new PriorityQueue(); 
+      pq.enqueue(['Beau Carnes', 2]); 
+      pq.enqueue(['Quincy Larson', 3]);
+      pq.enqueue(['Ewa Mitulska-Wójcik', 1])
+      pq.enqueue(['Briana Swift', 2])
+      pq.printCollection();
+      pq.dequeue();
+      console.log(pq.front());
+      pq.printCollection();
 
-    // const pq = new PriorityQueue(); 
-    //   pq.enqueue(['Beau Carnes', 2]); 
-    //   pq.enqueue(['Quincy Larson', 3]);
-    //   pq.enqueue(['Ewa Mitulska-Wójcik', 1])
-    //   pq.enqueue(['Briana Swift', 2])
-    //   pq.printCollection();
-    //   pq.dequeue();
-    //   console.log(pq.front());
-    //   pq.printCollection();
+    console.log('Stack');
+    const myStack = new Stack();
+      myStack.push(1);
+      myStack.push(2);
+      console.log(myStack.peek());
+      console.log(myStack.pop());
+      console.log(myStack.peek());
+      console.log(myStack.size());
 
-    // const myStack = new Stack();
-    //   myStack.push(1);
-    //   myStack.push(2);
-    //   console.log(myStack.peek());
-    //   console.log(myStack.pop());
-    //   console.log(myStack.peek());
-    //   myStack.push("freeCodeCamp");
-    //   console.log(myStack.size());
-    //   console.log(myStack.peek());
-    //   console.log(myStack.pop());
-    //   console.log(myStack.peek());
 
     const qs = new QuickSort();
       console.log('QuickSort', qs.quickSort([9,5,8,6,7,3,4,96,1,8,3,3,5,4,85,5,5]));
@@ -114,10 +107,11 @@ window.onload = () => {
     const rs = new RadixSort();
       console.log('RadixSort', rs.radixSort([9,5,8,6,7,3,4,96,1,8,3,3,5,4,85,5,5]));
 
-
+    console.log('BinarySearch');
     const search = new BinarySearch();
       let target = 'andy';
+      console.log('Looking for...', target);
       let result = search.binarySearch(sortedArray2, target);
-      console.log('BinarySearch Result', result);
+      console.log('Result: ', result);
 
 };
