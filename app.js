@@ -1,6 +1,7 @@
 /* HashTable */
 import LinkedList from './util/LinkedList.js';
 import HashTable from './util/HashTable.js';
+import BinarySearch from './util/BinarySearch.js';
 import BinarySearchTree from './util/BinarySearchTree.js';
 import Queue from './util/Queue.js';
 import PriorityQueue from './util/PriorityQueue.js';
@@ -100,7 +101,9 @@ window.onload = () => {
       console.log('QuickSort', qs.quickSort([9,5,8,6,7,3,4,96,1,8,3,3,5,4,85,5,5]));
 
     const ms = new MergeSort();
-      console.log('MergeSort', ms.mergeSort([9,5,8,6,7,3,4,96,1,8,3,3,5,4,85,5,5]));
+      let sortedArray1 = ms.mergeSort([9,5,8,6,7,3,4,96,1,8,3,3,5,4,85,5,5]);
+      let sortedArray2 = ms.mergeSort(['harry', 'bob', 'andy', 'liz', 'larry', 'alex']);
+      console.log('MergeSort:', sortedArray1, sortedArray2);
 
     const bs = new BubbleSort();
       console.log('BubbleSort', bs.bubbleSort([9,5,8,6,7,3,4,96,1,8,3,3,5,4,85,5,5]));
@@ -110,5 +113,11 @@ window.onload = () => {
 
     const rs = new RadixSort();
       console.log('RadixSort', rs.radixSort([9,5,8,6,7,3,4,96,1,8,3,3,5,4,85,5,5]));
+
+
+    const search = new BinarySearch();
+      let target = 'andy';
+      let result = search.binarySearch(sortedArray2, target);
+      console.log('BinarySearch Result', result);
 
 };
