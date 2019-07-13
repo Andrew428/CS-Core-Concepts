@@ -1,0 +1,19 @@
+{
+  "name": "hashtable",
+  "version": "1.0.0",
+  "description": "CS Concepts - HashTable",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Andrew Van Cleave",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serve-static": "^1.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
