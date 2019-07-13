@@ -1,2 +1,2 @@
 # CS Core Concepts
-CS concepts showing the implimtaion of HashTables in javascript.
+CS core concepts implimtated in javascript.
