@@ -37,7 +37,7 @@ A `Queues are a linear data structure` where nodes are added in a `FIFO - First 
  
 The BigO for a stack is `O(n)`.
  
-#Binary Search Tree
+# Binary Search Tree
 
 A Binary Search Tree data structure is one that very much would look like a tree in nature.  It starts with a root element.  As additional nodes are added, if the node is less than the parent node it would be added to the left side of the parent.  If it is greater than the parent then it would be added to the left side of the parent.  Each node will only have two child nodes.
       		 
