@@ -11,6 +11,7 @@ import MergeSort from './util/MergeSort.js';
 import BubbleSort from './util/BubbleSort.js';
 import SelectionSort from './util/SelectionSort.js';
 import RadixSort from './util/RadixSort.js';
+import Closures from './util/Closures.js';
 
 
 window.onload = () => {
@@ -35,9 +36,12 @@ window.onload = () => {
       ht.add('rex', 'dinosour');
       ht.add('tux', 'penguin');
       ht.add('testObj', {'testkey':'testvale'});
+      var obj = {'testkey':'testvalue'}
+      ht.add(obj.testkey, obj);
       ht.add('somestring');
       console.log(ht.lookup('somestring'));
-      console.log(ht.lookup('testObj'));
+      console.log(ht.lookup('testObj'));  
+      console.log(ht.lookup(obj.testkey)); 
       ht.print();
 
     console.log('BinarySearchTree');
@@ -117,4 +121,7 @@ window.onload = () => {
       let result = search.binarySearch(sortedArray2, target);
       console.log('Result: ', result);
 
+    console.log('Closures')
+    const closures = new Closures();
+    closures.outer();
 };
