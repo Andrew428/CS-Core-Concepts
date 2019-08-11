@@ -19,8 +19,11 @@ export default class HashTable {
   };
 
   add = (key, value) => {
+    if(value === undefined){
+      value = key;
+    }
     var index = this.hash(key, this.storageLimit);
-    if (this.storage[index] === undefined) {
+    if (this.storage[index] === undefined) {      
       this.storage[index] = [
         [key, value]
       ];

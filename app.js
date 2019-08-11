@@ -33,8 +33,11 @@ window.onload = () => {
       ht.add('beau', 'person');
       ht.add('fido', 'dog');
       ht.add('rex', 'dinosour');
-      ht.add('tux', 'penguin')
-      console.log(ht.lookup('tux'))
+      ht.add('tux', 'penguin');
+      ht.add('testObj', {'testkey':'testvale'});
+      ht.add('somestring');
+      console.log(ht.lookup('somestring'));
+      console.log(ht.lookup('testObj'));
       ht.print();
 
     console.log('BinarySearchTree');
