@@ -1,4 +1,4 @@
-Deploy Node.js WebServer on AWS EC2 and connect to MongoDB Atlas: 
+Deploy Node.js WebServer on AWS EC2: 
 1. Registrar a domain name for you Web Server. 
 
 2.  Set up security group if not you don’t have one already.  (Ensure all ports are open for inbound traffic)
